@@ -1,7 +1,4 @@
-/**
- * Created by wisdom on 2017/5/25.
- */
-export default function percent (data) {
+export function percent (data) {
     if (data === null) {
         return '--'
     }

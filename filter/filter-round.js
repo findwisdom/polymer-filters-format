@@ -2,7 +2,7 @@
  * Created by wisdom on 2017/5/25.
  */
 
-export default function  round(val, precision, method) {
+export function round (val, precision, method) {
     precision = precision || 0;
     var factor = Math.pow(10, precision);
     var rounder;

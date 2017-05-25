@@ -1,7 +1,7 @@
 /**
  * Created by wisdom on 2017/5/25.
  */
-export function excactdate = function (input, format) {
+export function excactdate (input, format) {
     var date = new Date(input),
         day = date.getDate(),
         month = date.getMonth() + 1,
