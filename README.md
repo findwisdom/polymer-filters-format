@@ -74,4 +74,31 @@ format.round(round，4，'floor') // 0.1235  退1法
 ```
 截至版本 1.0.3
 
+- replace - 字符串替换（可控制个数）
+
+Example:
+
+```javascript
+let round = 0.1234
+let dd1 = 'www www www www www'
+format.replace(round，123, 111) // 0.1114 默认四舍五入
+format.replace(round，www，qq, 1) // qq www www www www
+format.replace(round，www，qq, 2) // qq qq www www www
+```
+
+
+- trim - 去除两边空行空格
+
+Example:
+
+```javascript
+let str1 = '               小明           '
+let str2 = '
+                小红          '
+format.trim(str1) // 小明
+format.trim(str2) // 小红
+
+```
+截至版本 1.0.4
+
 后续方法持续更新中......
