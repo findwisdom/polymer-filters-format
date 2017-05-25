@@ -44,10 +44,10 @@ Example:
 
 ```javascript
 // 货币格式化
-// format.money(54321); // $54,321
-// format.money(12345, 0, "£ "); // £ 12,345
-// format.money(12345, 2, "£ "); // £ 12,345.00
-// format.money(12345.232, 2, "£ "); // £ 12,345.23
+format.money(54321); // $54,321
+format.money(12345, 0, "£ "); // £ 12,345
+format.money(12345, 2, "£ "); // £ 12,345.00
+format.money(12345.232, 2, "£ "); // £ 12,345.23
 
 ```
 
@@ -56,7 +56,7 @@ Example:
 Example:
 
 ```javascript
-// 货币格式化
+// 浮点类型格式化百分比
 let round = 0.1234324
 format.money(round) // 12.34%
 ```
@@ -66,7 +66,7 @@ format.money(round) // 12.34%
 Example:
 
 ```javascript
-// 货币格式化
+// 浮点类型截取格式化
 let round = 0.1234324323243
 format.round(round，4) // 0.1234 默认四舍五入
 format.round(round，4，'ceil') // 0.1235  进1法
