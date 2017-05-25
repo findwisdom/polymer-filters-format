@@ -1,24 +1,56 @@
-// 格式 date (date, yy-MM-dd)
-// 货币格式化
-// formatMoney(54321); // $54,321
-// formatMoney(12345, 0, "£ "); // £ 12,345
-// formatMoney(12345, 2, "£ "); // £ 12,345.00
-// formatMoney(12345.232, 2, "£ "); // £ 12,345.23
-export function formatMoney (number, places, symbol, thousand, decimal) {
-    number = number || 0
-    places = !isNaN(places = Math.abs(places)) ? places : 2
-    symbol = symbol !== undefined ? symbol : ' $ '
-    thousand = thousand || ', '
-    decimal = decimal || ' . '
-    var negative = number < 0 ? '-' : ''
-    var i = parseInt(number = Math.abs(+number || 0).toFixed(places), 10) + ''
-    var j = (j = i.length) > 3 ? j % 3 : 0
-    var value = symbol + negative + (j ? i.substr(0, j) + thousand : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + thousand) + (places ? decimal + Math.abs(number - i).toFixed(places).slice(2) : '')
-    value.toString()
-    console.log(value)
-    if (value === symbol + '-0 . 00' || value === symbol + '0 . 00') {
-        return symbol + '0 . 00'
-    } else {
-        return value
+export default function(input, format) {
+    var date = new Date(input),
+        day = date.getDate(),
+        month = date.getMonth() + 1,
+        year = date.getFullYear(),
+        hours = date.getHours(),
+        minutes = date.getMinutes(),
+        seconds = date.getSeconds();
+    
+    if (!format) {
+        format = "MM/dd/yyyy";
     }
-}
+    
+    format = format.replace("MM", month.toString().replace(/^(\d)$/, '0$1'));
+    
+    if (format.indexOf("yyyy") > -1) {
+        format = format.replace("yyyy", year.toString());
+    } else if (format.indexOf("yy") > -1) {
+        format = format.replace("yy", year.toString().substr(2, 2));
+    }
+    
+    format = format.replace("dd", day.toString().replace(/^(\d)$/, '0$1'));
+    
+    if (format.indexOf("t") > -1) {
+        if (hours > 11) {
+            format = format.replace("t", "pm");
+        } else {
+            format = format.replace("t", "am");
+        }
+    }
+    
+    if (format.indexOf("HH") > -1) {
+        format = format.replace("HH", hours.toString().replace(/^(\d)$/, '0$1'));
+    }
+    
+    if (format.indexOf("hh") > -1) {
+        if (hours > 12) {
+            hours -= 12;
+        }
+        
+        if (hours === 0) {
+            hours = 12;
+        }
+        format = format.replace("hh", hours.toString().replace(/^(\d)$/, '0$1'));
+    }
+    
+    if (format.indexOf("mm") > -1) {
+        format = format.replace("mm", minutes.toString().replace(/^(\d)$/, '0$1'));
+    }
+    
+    if (format.indexOf("ss") > -1) {
+        format = format.replace("ss", seconds.toString().replace(/^(\d)$/, '0$1'));
+    }
+    
+    return format;
+};

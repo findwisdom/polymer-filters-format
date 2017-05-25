@@ -6,7 +6,7 @@
 // formatMoney(12345, 0, "£ "); // £ 12,345
 // formatMoney(12345, 2, "£ "); // £ 12,345.00
 // formatMoney(12345.232, 2, "£ "); // £ 12,345.23
-export function formatMoney (number, places, symbol, thousand, decimal) {
+export default function (number, places, symbol, thousand, decimal) {
     number = number || 0
     places = !isNaN(places = Math.abs(places)) ? places : 2
     symbol = symbol !== undefined ? symbol : ' $ '

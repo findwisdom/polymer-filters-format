@@ -1,4 +1,5 @@
 build
 docs
 bower.json
-.idea.git
+.idea
+.git

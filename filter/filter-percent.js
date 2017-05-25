@@ -1,4 +1,4 @@
-export function percent (data) {
+export default function (data) {
     if (data === null) {
         return '--'
     }
