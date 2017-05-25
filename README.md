@@ -74,16 +74,19 @@ format.round(round，4，'floor') // 0.1235  退1法
 ```
 截至版本 1.0.3
 
-- replace - 字符串替换（可控制个数）
+- replace - 字符串替换（可控制个数,默认全局替换）
+
+replace方法仅仅操纵字符串
 
 Example:
 
 ```javascript
 let round = 0.1234
 let dd1 = 'www www www www www'
-format.replace(round，123, 111) // 0.1114 默认四舍五入
-format.replace(round，www，qq, 1) // qq www www www www
-format.replace(round，www，qq, 2) // qq qq www www www
+format.replace(round，'123', '111') // 0.1114
+format.replace(dd1，'www', 'q') // q q q q q
+format.replace(dd1，www，qq, 1) // qq www www www www
+format.replace(dd1，www，qq, 2) // qq qq www www www
 ```
 
 
@@ -99,6 +102,6 @@ format.trim(str1) // 小明
 format.trim(str2) // 小红
 
 ```
-截至版本 1.0.4
+截至版本 1.0.5
 
 后续方法持续更新中......
