@@ -58,7 +58,7 @@ Example:
 ```javascript
 // 浮点类型格式化百分比
 let round = 0.1234324
-format.money(round) // 12.34%
+format.percent(round) // 12.34%
 ```
 
 - round - 浮点类型保留小数N位
