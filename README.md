@@ -104,4 +104,69 @@ format.trim(str2) // 小红
 ```
 截至版本 1.0.5
 
+## 验证validator方法
+
+- .validator.IsNull - 判断是否为空
+
+```javascript
+let str = ''
+format.validator.IsNull (str) // true
+
+```
+
+
+- .validator.isNumber - 判断输入内容是否为实数
+
+```javascript
+
+let str1 = 'sa'
+let str2 = 11
+format.validator.isNumber (str1) // false
+format.validator.isNumber (str2) // true
+
+```
+
+- .validator.isIntNumber - 判断输入内容是否为整数
+
+```javascript
+
+let str1 = 11.5
+let str2 = 11
+format.validator.isIntNumber (str1) // false
+format.validator.isIntNumber (str2) // true
+
+```
+
+- .validator.IsLen - 判断输入内容是否不超过多少
+
+```javascript
+
+let str1 = 'sa21111111111111121212121212'
+let str2 = 'dsas'
+format.validator.IsLen (str1, 5) // false
+format.validator.IsLen (str2, 5) // true
+
+```
+
+- .validator.IsLetter - 判断输入的字符是否为英文或数字字母
+
+```javascript
+
+let str1 = 'sa21111111111111121212121212》'
+let str2 = 'dsas'
+format.validator.IsLetter (str1) // false
+format.validator.IsLetter (str2) // true
+
+```
+
+- .validator.isEmail - 判断输入的字符是否为英文或数字字母
+
+```javascript
+
+let str1 = 'sa21111111111111121212121212》'
+let str2 = '826206931@qq.com'
+format.validator.isEmail (str1) // false
+format.validator.isEmail (str2) // true
+
+```
 后续方法持续更新中......

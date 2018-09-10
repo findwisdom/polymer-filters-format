@@ -1,4 +1,4 @@
-export default function(input, format) {
+export default function (input, format) {
     var date = new Date(input),
         day = date.getDate(),
         month = date.getMonth() + 1,
