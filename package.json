@@ -1,6 +1,6 @@
 {
   "name": "polymer-filters-format",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "a format filter polymer",
   "main": "./dist/index.js",
   "scripts": {
