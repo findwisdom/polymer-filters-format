@@ -26,7 +26,7 @@ import format from 'polymer-filters-format'
 var format = require('polymer-filters-format')
 ```
 
-## 内置方法
+### 内置方法
 
 - date - 时间格式转换方法
 
@@ -72,7 +72,7 @@ format.round(round，4) // 0.1234 默认四舍五入
 format.round(round，4，'ceil') // 0.1235  进1法
 format.round(round，4，'floor') // 0.1235  退1法
 ```
-截至版本 1.0.3
+## 截至版本 1.0.3
 
 - replace - 字符串替换（可控制个数,默认全局替换）
 
@@ -102,9 +102,9 @@ format.trim(str1) // 小明
 format.trim(str2) // 小红
 
 ```
-截至版本 1.0.5
+## 截至版本 1.0.5
 
-## 验证validator方法
+验证validator方法
 
 - .validator.IsNull - 判断是否为空
 
@@ -171,6 +171,7 @@ format.validator.isEmail (str2) // true
 ```
 后续方法持续更新中......
 
-截至版本 1.0.7
+## 截至版本 1.0.8
 
-## 版本 1.0.6 弃用
+版本 [1.0.6] 弃用
+版本 [1.0.7] 弃用
