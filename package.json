@@ -1,6 +1,6 @@
 {
   "name": "polymer-filters-format",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "a format filter polymer",
   "main": "./dist/index.js",
   "scripts": {
@@ -8,10 +8,14 @@
     "build": "webpack"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/runtime": "^7.1.2",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0"
   },
@@ -29,8 +33,5 @@
     "url": "https://github.com/findwisdom/polymer-filters-format/issues"
   },
   "homepage": "https://github.com/findwisdom/polymer-filters-format#readme",
-  "dependencies": {
-    "babel-loader": "^7.1.5",
-    "babel-runtime": "^6.26.0"
-  }
+  "dependencies": {}
 }
