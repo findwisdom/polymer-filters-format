@@ -170,3 +170,7 @@ format.validator.isEmail (str2) // true
 
 ```
 后续方法持续更新中......
+
+截至版本 1.0.7
+
+## 版本 1.0.6 弃用
