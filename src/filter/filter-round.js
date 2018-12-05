@@ -3,6 +3,7 @@
  */
 
 export default function (val, precision, method) {
+    var da = 0
     precision = precision || 0;
     var factor = Math.pow(10, precision);
     var rounder;

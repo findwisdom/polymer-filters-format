@@ -51,6 +51,9 @@ export default function (input, format) {
     if (format.indexOf("ss") > -1) {
         format = format.replace("ss", seconds.toString().replace(/^(\d)$/, '0$1'));
     }
+
+    
+
     
     return format;
 };
